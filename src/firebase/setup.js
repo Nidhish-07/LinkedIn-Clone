@@ -3,8 +3,11 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import {getAuth,GoogleAuthProvider} from "firebase/auth"
 import {getFirestore} from "firebase/firestore"
+import dotenv from "dotenv"
+dotenv.config()
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDc1TcajB_g6Vc0ty78xkQgQiZAo_Na6Dg",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "linkedin-clone-2cd79.firebaseapp.com",
   projectId: "linkedin-clone-2cd79",
   storageBucket: "linkedin-clone-2cd79.appspot.com",
